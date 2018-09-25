@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CD89917-7668-41F3-AFE2-9092937548B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TechStore</RootNamespace>
+    <AssemblyName>TechStore</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>186225_VQC_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DGV Printer">
+      <HintPath>..\DGV Printer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Artikl.cs">
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dokument.cs">
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dostupnost.cs">
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="uiArtikl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiArtikl.Designer.cs">
+      <DependentUpon>uiArtikl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiDodavanjePoslovnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiDodavanjePoslovnica.Designer.cs">
+      <DependentUpon>uiDodavanjePoslovnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiDodavanjeVrsteArtikla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiDodavanjeVrsteArtikla.Designer.cs">
+      <DependentUpon>uiDodavanjeVrsteArtikla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiDodavanjeZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiDodavanjeZaposlenika.Designer.cs">
+      <DependentUpon>uiDodavanjeZaposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiHelp.Designer.cs">
+      <DependentUpon>uiHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiKonfiguracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiKonfiguracija.Designer.cs">
+      <DependentUpon>uiKonfiguracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiNabava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiNabava.Designer.cs">
+      <DependentUpon>uiNabava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiNoviArtikl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiNoviArtikl.Designer.cs">
+      <DependentUpon>uiNoviArtikl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiPoslovnice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiPoslovnice.Designer.cs">
+      <DependentUpon>uiPoslovnice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiPregledNarudzbi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiPregledNarudzbi.Designer.cs">
+      <DependentUpon>uiPregledNarudzbi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiPrijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiPrijava.Designer.cs">
+      <DependentUpon>uiPrijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiIzbornik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiIzbornik.Designer.cs">
+      <DependentUpon>uiIzbornik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiStanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiStanje.Designer.cs">
+      <DependentUpon>uiStanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiVrstaArtikl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiVrstaArtikl.Designer.cs">
+      <DependentUpon>uiVrstaArtikl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiZaposlenici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiZaposlenici.Designer.cs">
+      <DependentUpon>uiZaposlenici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiKolicinaArtikala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiKolicinaArtikala.Designer.cs">
+      <DependentUpon>uiKolicinaArtikala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kompatibilnost.cs">
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Poslovnica.cs">
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StanjeDokumenta.cs">
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StavkaDokumenta.cs">
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TechStoreModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechStoreModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TechStoreModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TechStoreModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechStoreModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="TipZaposlenika.cs">
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VrstaArtikla.cs">
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VrstaDokumenta.cs">
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VrsteStanja.cs">
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Zaposlenik.cs">
+      <DependentUpon>TechStoreModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="uiArtikl.resx">
+      <DependentUpon>uiArtikl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiDodavanjePoslovnica.resx">
+      <DependentUpon>uiDodavanjePoslovnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiDodavanjeVrsteArtikla.resx">
+      <DependentUpon>uiDodavanjeVrsteArtikla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiDodavanjeZaposlenika.resx">
+      <DependentUpon>uiDodavanjeZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiHelp.resx">
+      <DependentUpon>uiHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiIzbornik.resx">
+      <DependentUpon>uiIzbornik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiKonfiguracija.resx">
+      <DependentUpon>uiKonfiguracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiNabava.resx">
+      <DependentUpon>uiNabava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiNoviArtikl.resx">
+      <DependentUpon>uiNoviArtikl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiPoslovnice.resx">
+      <DependentUpon>uiPoslovnice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiPregledNarudzbi.resx">
+      <DependentUpon>uiPregledNarudzbi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiPrijava.resx">
+      <DependentUpon>uiPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiStanje.resx">
+      <DependentUpon>uiStanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiVrstaArtikl.resx">
+      <DependentUpon>uiVrstaArtikl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiZaposlenici.resx">
+      <DependentUpon>uiZaposlenici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiKolicinaArtikala.resx">
+      <DependentUpon>uiKolicinaArtikala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Artikl.datasource" />
+    <None Include="Properties\DataSources\Dokument.datasource" />
+    <None Include="Properties\DataSources\Poslovnica.datasource" />
+    <None Include="Properties\DataSources\StavkaDokumenta.datasource" />
+    <None Include="Properties\DataSources\TipZaposlenika.datasource" />
+    <None Include="Properties\DataSources\VrstaArtikla.datasource" />
+    <None Include="Properties\DataSources\VrstaDokumenta.datasource" />
+    <None Include="Properties\DataSources\Zaposlenik.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="TechStoreModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TechStoreModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TechStoreModel.edmx.diagram">
+      <DependentUpon>TechStoreModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pozadina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pozadina_nova.jpg" />
+    <Content Include="186225_VQC_icon.ico" />
+    <Content Include="TechStoreModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TechStoreModel.Context.cs</LastGenOutput>
+      <DependentUpon>TechStoreModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="TechStoreModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TechStoreModel.edmx</DependentUpon>
+      <LastGenOutput>TechStoreModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Komponente\Komponente.csproj">
+      <Project>{3FF5F4B0-4FC9-4C89-A540-1147EF58F318}</Project>
+      <Name>Komponente</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
